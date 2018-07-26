@@ -478,10 +478,147 @@ return this.httpClient.get('http://localhost:3000/games').toPromise();
         <!-- .end .wrap -->
       </section>
 
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-90 aligncenter">
+          <h2>Exercise - 15 minutes</h2>
+          <div class="grid vertical-align">
+            <div class="column">
 
 
+              <div class="bg-white shadow">
+                <pre><code><h5>
+  return this.httpClient.get('http://localhost:3000/games').toPromise();
+    </h5></code></pre>
+                <br>
+                <pre><code><h5>
+  &lt;div *ngFor="let message of messages">
+      {{ message.title }} by {{ message.publisher }} of {{ message.year}} at {{ message.imageUrl }}
+  &lt;/div>
+    </h5></code></pre>
+              </div>
+
+            </div>
+            <div class="column">
+              <ul class="flexblock reasons">
+                <li class="text-intro">in web.service.ts change the url to /games</li>
+                <li class="text-intro">in messages.component.html change the expressions to match our game model</li>
+                <li class="text-intro">in lab5/ (or other) change /games to send json data instead of rendering a view</li>
+                <li class="text-intro">(or erase backend and replace it with lab5)</li>
+              </ul>
+            </div>
+          </div>
+          <!-- .end .bg-white shadow -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
 
 
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-90 aligncenter">
+          <h2>npm i bulma</h2>
+          <div class="grid vertical-align">
+            <div class="column">
+
+
+              <div class="bg-white shadow">
+                <pre><code><h5>
+"styles": [
+  "node_modules/bulma/css/bulma.min.css",
+  "src/styles.css"
+],
+    </h5></code></pre>
+              </div>
+
+            </div>
+            <div class="column">
+              <ul class="flexblock reasons">
+                <li class="text-intro">npm i bulma</li>
+                <li class="text-intro">in angular.json add to styles "node_modules/bulma/css/bulma.min.css"</li>
+              </ul>
+            </div>
+          </div>
+          <!-- .end .bg-white shadow -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-90 aligncenter">
+          <h2>ng generate component navbar</h2>
+          <div class="grid vertical-align">
+            <div class="column">
+
+
+              <div class="bg-white shadow">
+
+                <h5>
+                  <a href="https://fontawesome.com/how-to-use/on-the-web/setup/getting-started?using=web-fonts-with-css">Font awesome 5</a>
+                </h5>
+
+
+              </div>
+
+            </div>
+            <div class="column">
+              <ul class="flexblock reasons">
+                <li class="text-intro">ng g c navbar</li>
+                <li class="text-intro">Copy from Blackboard navbar html</li>
+                <li class="text-intro">Paste it into navbar.component.html</li>
+                <li class="text-intro">In index.html include font awesome 5</li>
+              </ul>
+            </div>
+          </div>
+          <!-- .end .bg-white shadow -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
+
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-90 aligncenter">
+          <h2>creating routes</h2>
+          <div class="grid vertical-align">
+            <div class="column">
+
+
+              <div class="bg-white shadow">
+                <pre><code><h5>
+import { RouterModule } from '@angular/router';
+...
+imports: [BrowserModule, RouterModule.forRoot(routes), HttpClientModule],
+</h5></code></pre>
+                <br>
+                <pre><code><h5>
+const routes = [
+  { path: '', component: HomeComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'play', component: PlayComponent },
+  { path: 'games', component: GamesComponent },
+  { path: 'edit', component: EditComponent },
+  { path: 'add', component: AddComponent }
+];
+</h5></code></pre>
+
+              </div>
+
+            </div>
+            <div class="column">
+              <ul class="flexblock reasons">
+                <li class="text-intro">in app.module.ts import RouterModule/Routes and include it in imports</li>
+                <li class="text-intro">ng g c Home (etc.)</li>
+                <li class="text-intro">in app.module.ts create array of routes</li>
+              </ul>
+            </div>
+          </div>
+          <!-- .end .bg-white shadow -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
 
 
 
