@@ -612,7 +612,14 @@ const routes = [
                 <li class="text-intro">in app.module.ts import RouterModule/Routes and include it in imports</li>
                 <li class="text-intro">ng g c Home (etc.)</li>
                 <li class="text-intro">in app.module.ts create array of routes</li>
+                <li class="text-intro">in app.component.html add router outlet</li>
               </ul>
+              <pre><code><h5>
+&lt;app-nav>&lt;/app-nav>
+&lt;div class="container">
+&lt;router-outlet>&lt;/router-outlet>
+&lt;/div>                
+              </h5></code></pre>
             </div>
           </div>
           <!-- .end .bg-white shadow -->
@@ -620,10 +627,59 @@ const routes = [
         <!-- .end .wrap -->
       </section>
 
+      <section class="bg-apple">
+        <!--.wrap = container (width: 90%) -->
+        <div class="wrap size-90 aligncenter">
+          <h2>games page</h2>
+          <div class="grid vertical-align">
+            <div class="column">
 
 
+              <div class="bg-white shadow">
+                <pre><code><h5>
+import { Component, OnInit } from '@angular/core';
+import { WebService } from '../web.service';
 
+@Component({
+  selector: 'app-games',
+  templateUrl: './games.component.html',
+  styleUrls: ['./games.component.css']
+})
+export class GamesComponent implements OnInit {
+  games: Array&lt;object>;
+  response: any;
 
+  constructor(private webService: WebService) {}
+
+  async ngOnInit() {
+    this.response = await this.webService.getGames();
+    this.games = this.response;
+  }
+}                    
+</h5></code></pre>
+
+              </div>
+
+            </div>
+            <div class="column">
+              <ul class="flexblock reasons">
+                <li class="text-intro">in games.component.html copy/paste from Blackboard games markup</li>
+                <li class="text-intro">in games.component.ts import Webservice and use it in ngOnInit</li>
+                <li class="text-intro">in web.service.ts create getGames(); Delete messages component and references to it in app.module.ts</li>
+              </ul>
+              <pre><code><h5>
+basehref: string = 'http://localhost:3000';
+...
+getGames() {
+  return this.httpClient.get(this.basehref + '/games').toPromise();
+}
+</h5></code></pre>
+            </div>
+          </div>
+          <!-- .end .bg-white shadow -->
+        </div>
+        <!-- .end .wrap -->
+      </section>
 
 
 
